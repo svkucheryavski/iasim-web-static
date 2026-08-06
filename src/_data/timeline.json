@@ -1,0 +1,60 @@
+[
+   {
+      "year": 2028,
+      "place": "Dublin, Irland",
+      "next": true
+   },
+   {
+      "year": 2026,
+      "place": "Umeå, Sweden",
+      "info": "55 participants.",
+      "pdf": "/documents/iasim-2026-abstracts.pdf"
+   },
+   {
+      "year": 2024,
+      "place": "Bilbao, Spain",
+      "info": "195 participants.",
+      "pdf": "/documents/iasim-2024-abstracts.pdf"
+   },
+   {
+      "year": 2022,
+      "place": "Esbjerg, Denmark",
+      "info": "75 participants.",
+      "pdf": "/documents/iasim-2022-abstracts.pdf"
+   },
+   {
+      "year": 2018,
+      "place": "Seattle, USA",
+      "info": "70 participants."
+   },
+   {
+      "year": 2016,
+      "place": "Chamonix-Mont-Blanc, France",
+      "info": "80 participants."
+   },
+   {
+      "year": 2014,
+      "place": "Rome, Italy",
+      "info": "50 participants."
+   },
+   {
+      "year": 2012,
+      "place": "Sigulda, Latvia",
+      "info": "50 participants."
+   },
+   {
+      "year": 2011,
+      "place": "Riga, Latvia",
+      "info": "50 participants."
+   },
+   {
+      "year": 2010,
+      "place": "Dublin, Irland",
+      "info": "50 participants."
+   },
+   {
+      "year": 2009,
+      "place": "Gembloux, Belgium",
+      "info": "50 participants."
+   }
+]

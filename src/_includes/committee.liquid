@@ -1,0 +1,23 @@
+{% assign total_plus_one = committee.size | plus: 1 %}
+{% assign split_point = total_plus_one | divided_by: 2 %}
+
+<h2>Permanent committee</h2>
+<section id="committee" class="committee">
+
+   <ul class="committee__list">
+      {% for member in committee limit: split_point %}
+         <li class="committee__member">
+            <div class="committee__member_name">{{member.name}}</div>
+            <div class="committee__member_place">{{member.place}}</div>
+         </li>
+      {% endfor %}
+   </ul>
+   <ul class="committee__list">
+      {% for member in committee offset: split_point %}
+         <li class="committee__member">
+            <div class="committee__member_name">{{member.name}}</div>
+            <div class="committee__member_place">{{member.place}}</div>
+         </li>
+      {% endfor %}
+   </ul>
+</section>

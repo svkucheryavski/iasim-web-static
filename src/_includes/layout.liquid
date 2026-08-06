@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="Keywords" content="International Association for Hyperspectral Imaging, IASIM">
+   <meta name="Description" content="International Association for Hyperspectral Imaging">
+
+   <link rel="icon" href="/favicon.png" type="image/png">
+   <link rel="stylesheet" href="/styles/iasim.css">
+   <title>International Association for Hyperspectral Imaging (IASIM)</title>
+</head>
+<body>
+   <div class="page-wrapper" id="page-wrapper">
+      <header class="page__header">
+         <img class="page__header_logo" src="/images/logo.png" />
+         <h1 class="page__header_title">
+            <span>I</span>nternational <span>A</span>ssociation for <br>
+            <span>S</span>pectral <span>IM</span>aging
+         </h1>
+         <nav class="nav">
+            <ul>
+               <li><a data-label="Home" aria-label="Home" href="#home">●</a></li>
+               <li><a data-label="Committee" aria-label="Committee>" href="#committee">●</a></li>
+               <li><a data-label="Award" aria-label="Award" href="#award">●</a></li>
+               <li><a data-label="History" aria-lable="History" href="#history">●</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main class="page__content">
+         <p id="home" class="iasim-info">
+            The objective of the International Association for Spectral Imaging (IASIM) is to provide a unified open and interactive forum for the exchange of information and ideas within the general spectral imaging community, regardless of the image spectral range (ultraviolet, visible, near, mid, or far infrared, or mass spectrometry) or spatial range (microscopic, macroscopic, remote sensing).
+         </p>
+         {% include "committee.liquid" %}
+         {% include "award.liquid" %}
+         {% include "history.liquid" %}
+
+         <footer>Copyright © 2010-2026 International Association for Spectral Imaging (IASIM). All Rights Reserved.</footer>
+      </main>
+      <aside class="page__sidebar">
+         {% include "timeline.liquid" %}
+      </aside>
+   </div>
+
+   <script>
+
+      const navigation = document.querySelector(".nav");
+
+      if (navigation) {
+      const links = Array.from(
+         navigation.querySelectorAll('a[href^="#"]')
+      );
+
+      const sections = links
+         .map((link) => document.querySelector(link.hash))
+         .filter(Boolean);
+
+      function setActiveSection(sectionId) {
+         links.forEach((link) => {
+            const isActive = link.hash === `#${sectionId}`;
+
+            link.classList.toggle("is-active", isActive);
+
+            if (isActive) {
+            link.setAttribute("aria-current", "location");
+            } else {
+            link.removeAttribute("aria-current");
+            }
+         });
+      }
+
+      const observer = new IntersectionObserver(
+         (entries) => {
+            const visibleSections = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort(
+               (first, second) =>
+                  first.boundingClientRect.top -
+                  second.boundingClientRect.top
+            );
+
+            if (visibleSections.length > 0) {
+            setActiveSection(visibleSections[0].target.id);
+            }
+         },
+         {
+            /*
+            * Creates a narrow detection area near the upper
+            * part of the viewport.
+            */
+            rootMargin: "-20% 0px -70% 0px",
+            threshold: 0
+         }
+      );
+
+      sections.forEach((section) => {
+         observer.observe(section);
+      });
+
+      /*
+         * Set the initial active link.
+         */
+      const initialSectionId =
+         window.location.hash.slice(1) ||
+         (sections[0] && sections[0].id);
+
+      if (initialSectionId) {
+         setActiveSection(initialSectionId);
+      }
+
+      /*
+         * Update when using browser back and forward controls.
+         */
+      window.addEventListener("hashchange", () => {
+         const sectionId = window.location.hash.slice(1);
+
+         if (sectionId) {
+            setActiveSection(sectionId);
+         }
+      });
+
+      /*
+         * Ensure that a short final section becomes active
+         * when the user reaches the bottom of the page.
+         */
+      window.addEventListener(
+         "scroll",
+         () => {
+            const isAtBottom =
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 2;
+
+            if (isAtBottom && sections.length > 0) {
+            const finalSection = sections[sections.length - 1];
+            setActiveSection(finalSection.id);
+            }
+         },
+         { passive: true }
+      );
+      }
+   </script>
+
+</body>
+</html>
