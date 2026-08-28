@@ -1,7 +1,7 @@
 [
    {
       "year": 2028,
-      "place": "Dublin, Irland",
+      "place": "Dublin, Ireland",
       "next": true
    },
    {
@@ -56,7 +56,10 @@
    {
       "year": 2012,
       "place": "Jūrmala, Latvia",
-      "info": "50 participants."
+      "info": "50 participants.",
+      "assets": [
+         {"name": "Conference abstracts", "url": "/documents/iasim-2012-abstracts.pdf"}
+      ]
    },
    {
       "year": 2011,
@@ -65,7 +68,7 @@
    },
    {
       "year": 2010,
-      "place": "Dublin, Irland",
+      "place": "Dublin, Ireland",
       "info": "50 participants.",
       "assets": [
          {"name": "Conference flyer", "url": "/documents/iasim-2010-flyer.pdf"}
