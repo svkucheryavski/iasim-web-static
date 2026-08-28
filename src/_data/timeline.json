@@ -8,34 +8,50 @@
       "year": 2026,
       "place": "Umeå, Sweden",
       "info": "55 participants.",
-      "pdf": "/documents/iasim-2026-abstracts.pdf"
+      "assets": [
+         {"name": "Conference abstracts", "url": "/documents/iasim-2026-abstracts.pdf"}
+      ]
+
    },
    {
       "year": 2024,
       "place": "Bilbao, Spain",
       "info": "195 participants.",
-      "pdf": "/documents/iasim-2024-abstracts.pdf"
+      "assets": [
+         {"name": "Conference abstracts", "url": "/documents/iasim-2024-abstracts.pdf"}
+      ]
    },
    {
       "year": 2022,
       "place": "Esbjerg, Denmark",
       "info": "75 participants.",
-      "pdf": "/documents/iasim-2022-abstracts.pdf"
+      "assets": [
+         {"name": "Conference abstracts", "url": "/documents/iasim-2022-abstracts.pdf"}
+      ]
    },
    {
       "year": 2018,
       "place": "Seattle, USA",
-      "info": "70 participants."
+      "info": "70 participants.",
+      "assets": [
+         {"name": "Conference abstracts", "url": "/documents/iasim-2018-abstracts.pdf"}
+      ]
    },
    {
       "year": 2016,
       "place": "Chamonix-Mont-Blanc, France",
-      "info": "80 participants."
+      "info": "80 participants.",
+      "assets": [
+         {"name": "Conference programme", "url": "/documents/iasim-2016-programme.pdf"}
+      ]
    },
    {
       "year": 2014,
       "place": "Rome, Italy",
-      "info": "50 participants."
+      "info": "50 participants.",
+      "assets": [
+         {"name": "Conference abstracts", "url": "/documents/iasim-2014-abstracts.pdf"}
+      ]
    },
    {
       "year": 2012,
@@ -50,7 +66,10 @@
    {
       "year": 2010,
       "place": "Dublin, Irland",
-      "info": "50 participants."
+      "info": "50 participants.",
+      "assets": [
+         {"name": "Conference flyer", "url": "/documents/iasim-2010-flyer.pdf"}
+      ]
    },
    {
       "year": 2009,

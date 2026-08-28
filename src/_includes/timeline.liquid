@@ -6,7 +6,7 @@
          <div class="timeline__item_year">{{ item.year }}</div>
          <div class="timeline__item_place">{{ item.place }}</div>
          {% if item.url %}
-         <div class="timeline__item_link"><a href="{{ item.pdf }}">Conference web-site</a></div>
+         <div class="timeline__item_link"><a href="{{ item.url }}">Conference web-site</a></div>
          {% else %}
          <div class="timeline__item_info">Coming soon...</div>
          {% endif %}
@@ -15,9 +15,12 @@
       <li class="timeline__item">
          <div class="timeline__item_year">{{ item.year }}</div>
          <div class="timeline__item_place">{{ item.place }}</div>
+
          <div class="timeline__item_info">{{ item.info }}</div>
-         {% if item.pdf %}
-         <div class="timeline__item_link"><a class="pdf" href="{{ item.pdf }}">Book of abstracts</a></div>
+         {% if item.assets  %}
+            {%  for asset in item.assets %}
+            <div class="timeline__item_link"><a class="pdf" href="{{ asset.url }}">{{ asset.name }}</a></div>
+            {% endfor %}
          {% endif %}
       </li>
    {% endif %}
