@@ -339,6 +339,18 @@ a:hover {
   }
 }
 
+.link-block {
+  margin: 0.5em 1em;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #f0f0f0;
+  text-align: center;    
+}
+
+.link-block a{
+  color: #4568c7;        
+}
+
 /*********************************/
 /* Main content + members        */
 /*********************************/
